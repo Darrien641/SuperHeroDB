@@ -1,0 +1,12 @@
+﻿@model List<ComicBook>
+
+@{
+}
+<h2>Comic Book List</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+       <li>@item.ComicBookTitle</li>
+    }
+</ul>

@@ -18,6 +18,7 @@ namespace MVC_ComicBooksCharacters.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            
             List<ComicBook> model = (from comic in db.ComicBooks
                                      orderby comic.ComicBookTitle
                                      select comic).ToList();

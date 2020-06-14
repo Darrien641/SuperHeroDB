@@ -1,12 +1,21 @@
 ﻿@model List<ComicBook>
 
 @{
+    ViewData["Title"] = "Comic Book List";
+    ViewData["HeroDescription"] = "A Super Hero is a fictional character, that usually originates from a comic book. The hero usually starts life as a normal human being in society then, a science fiction catastrophe happens resulting in the hero gaining their Superpowers. They then decide to use their Superpowers for good to save people, stop crime, and serve justice thus they are a \"Super\" hero.";
 }
-<h2>Comic Book List</h2>
+<h2 class="display-1">@ViewData["Title"]</h2>
 
-<ul>
-    @foreach (var item in Model)
-    {
-       <li>@item.ComicBookTitle</li>
-    }
-</ul>
+<div>
+    <ul class="list-unstyled">
+        @foreach (var item in Model)
+        {
+            <li>@item.ComicBookTitle</li>
+        }
+    </ul>
+    <br />
+    <br />
+    <p class="text-center">@ViewData["HeroDescription"]</p>
+    <br />
+    <br />
+</div>
